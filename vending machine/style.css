@@ -1,0 +1,397 @@
+/* 전체 설정 */
+.a11y-hidden {
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    list-style: none;
+}
+body{
+    background-color: #EAE8FE;
+}
+
+/* 헤더 */
+header{
+    text-align: center;
+}
+header img{
+    width: 386px;
+    height: 180px;
+}
+
+/* 전체 레이아웃 */
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+    width: 748px;
+    margin: 67px auto 0 auto;
+    gap:28px;
+}
+.machine-display{
+    width: 360px;
+    height: 545px;
+    background-color: #fff;
+}
+.wallet{
+    width: 360px;
+    height: 50px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    position: relative;
+}
+.collect-list{
+    width: 360px;
+    height: 474px;
+    background-color: #fff;
+    position: relative;
+    text-align: center;
+    padding-top: 25px;
+    box-sizing: border-box;
+}
+
+/* machine-display */
+.cola-list{
+    display:flex;
+    flex-wrap: wrap;
+    width: 306px;
+    margin: 31px auto;
+    gap: 12px;
+}
+.cola-list li{
+    width: 94px;
+    height:130px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 0 10px #000000a1;
+}
+.cola-list li img{
+    width: 36px;
+    height: 65px;
+    margin-top: 11px;
+}
+.cola-list p{
+    font-weight: 500;
+    font-size: 9px;
+    display: block;
+}
+.cola-list p:last-child{
+    display: block;
+    width: 70px;
+    height: 22px;
+    margin: auto;
+    background-color: #6327FE;
+    line-height: 22px;
+    color:#fff;
+    border-radius: 50px;
+    font-size: 12px;
+}
+.cola-list .select-cola{
+    border: 3px solid #6327FE;
+    box-shadow: none;
+}
+.cola-list .sold-out{
+    position: relative;
+    box-shadow: none;
+}
+.sold-out::before{
+    position: absolute;
+    z-index: 100;
+    width: 94px;
+    height:130px;
+    content: "";
+    background: #000000CC;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+
+}
+.sold-out::after{
+    rotate: -17.97deg;
+    color: #fff;
+    position: absolute;
+    content: "품절";
+    z-index: 200;
+    width: 51px;
+    height:27px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 3px double #EAE8FE;
+    text-align: center;
+    line-height: 20px;
+    font-weight: 900;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+.change{
+    width: 306px;
+    height: 33px;
+    margin: 20px auto 11px;
+    display: flex;
+    gap: 12px;
+}
+.change-display{
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    width: 200px;
+    height: 32px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 6px 10px;
+    box-sizing: border-box;
+    background-color: #EAE8FE;
+    font-weight: 500;
+}
+.change-display p:nth-child(2){
+margin-left: auto;
+}
+.change .btn{
+    width: 94px;
+    height: 33px;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 19px;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
+    border: none;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.insert-coin{
+    width: 306px;
+    height: 33px;
+    margin: 0 auto 11px;
+    display: flex;
+    gap: 12px;
+}
+.insert-coin input{
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    width: 200px;
+    height: 32px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 6px 10px;
+    box-sizing: border-box;
+    background-color: #fff;
+    font-weight: 500;
+    border: 1px solid #BDBDBD;
+}
+.insert-coin .btn{
+    width: 94px;
+    height: 33px;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 19px;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
+    border: none;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.selection{
+    width: 306px;
+    height: 106px;
+    margin: auto;
+    display: flex;
+    gap: 12px;
+    box-sizing: border-box;
+}
+.selection-list{
+    border: 1px solid #BDBDBD;
+    width: 200px;
+    height: 106px;
+    border-radius: 5px;
+    background-color: #EAE8FE;
+    overflow: scroll;
+}
+.selection-list li{
+    display: flex;
+    width:170px;
+    height:46px;
+    background-color: #fff;
+    margin:6px auto;
+    border-radius: 5px;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+    font-weight: 500;
+    font-size: 9px;
+}
+.selection-list li:first-child{
+    margin-top: 12px;
+}
+.selection-list li::before{
+    width: 18px;
+    height: 33px;
+    content: "";
+    background-size: 100% 100%;
+    background-image:url(img/coke-red.svg);
+    margin: 6px 10px;
+}
+.selection-list .green-cola:before{
+    background-image:url(img/coke-green.svg);
+}
+.selection-list li p{
+    display: block;
+    border: 1px solid #BDBDBD;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 8px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+}
+.selection-list::-webkit-scrollbar{
+    width: 4px;
+    height: 16px;
+}
+.selection-list::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 25px;
+}
+.selection-list::-webkit-scrollbar-track{
+    background-color: #EAE8FE;
+}
+.selection-list::-webkit-scrollbar-corner {
+	background: transparent;
+}
+.selection button{
+    width: 94px;
+    height: 106px;
+    background: #6327FE;
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    border-radius: 5px;
+    border: none;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
+}
+
+/* wallet */
+.wallet-display{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    width: 305px;
+    height: 32px;
+    border-radius: 5px;
+    margin:9px auto;
+    font-size: 14px;
+    padding: 6px 10px;
+    box-sizing: border-box;
+    background-color: #EAE8FE;
+    font-weight: 700;
+}
+.wallet-display p:first-child{
+    font-weight: 500;
+}
+.wallet-display p:nth-child(2){
+margin-left: auto;
+}
+
+/* collect-list */
+.collect-list h2 {
+    font-size: 14px;
+    font-weight: 700;
+}
+.collect-list-detail{
+    border: 1px solid #BDBDBD;
+    width: 306px;
+    height: 364px;
+    margin: 13px auto;
+    border-radius: 5px;
+    background-color: #EAE8FE;
+}
+.collect-list-detail li{
+    display: flex;
+    width:276px;
+    height:46px;
+    background-color: #fff;
+    margin:6px auto;
+    border-radius: 5px;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+    font-weight: 500;
+    font-size: 9px;
+}
+.collect-list-detail li:first-child{
+    margin-top: 12px;
+}
+.collect-list-detail li::before{
+    width: 18px;
+    height: 33px;
+    content: "";
+    background-size: 100% 100%;
+    background-image:url(img/coke-red.svg);
+    margin: 6px 10px;
+}
+.collect-list-detail .green-cola:before{
+    background-image:url(img/coke-green.svg);
+}
+.collect-list-detail .orange_cola:before{
+    background-image:url(img/coke-orange.svg);
+}
+.collect-list-detail .violet_cola:before{
+    background-image:url(img/coke-violet.svg);
+}
+.collect-list-detail li p{
+    display: block;
+    border: 1px solid #BDBDBD;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 8px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+}
+.collect-list-sum{
+    display: flex;
+    gap: 3px;
+    position: absolute;
+    bottom: 26px;
+    right: 27px;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+/* 반응형 */
+@media (max-width: 800px) {
+    body{
+        background-color: #fff;
+    }
+    .wrap{
+        width: 360px;
+        gap:0;
+    }
+    .wallet{
+        margin-bottom: 0;
+    }
+  }
